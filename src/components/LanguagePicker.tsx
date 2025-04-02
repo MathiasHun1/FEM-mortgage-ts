@@ -15,11 +15,12 @@ const LanguagePicker = ({ setLanguage }: Props) => {
 
   const handleClick = (e: React.MouseEvent<HTMLLIElement>) => {
     const target = e.target as HTMLLIElement;
+    console.log('runs');
 
     if (target.dataset.id === 'hun') {
       setCurrent('HU');
       setLanguage(lang.hun);
-    } else if (target.id === 'eng') {
+    } else if (target.dataset.id === 'eng') {
       setCurrent('GB');
       setLanguage(lang.eng);
     }
